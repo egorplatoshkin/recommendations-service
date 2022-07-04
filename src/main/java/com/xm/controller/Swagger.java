@@ -52,7 +52,7 @@ public class Swagger {
     }
 
     @Bean
-    public RequestHandlerProvider customRequestHandlerProvider(Optional<ServletContext> servletContext, HandlerMethodResolver methodResolver, List<RequestMappingInfoHandlerMapping> handlerMappings) {
+    public RequestHandlerProvider serviceRequestHandlerProvider(Optional<ServletContext> servletContext, HandlerMethodResolver methodResolver, List<RequestMappingInfoHandlerMapping> handlerMappings) {
         String contextPath = servletContext.map(ServletContext::getContextPath).orElse(Paths.ROOT);
         return () -> handlerMappings.stream()
                 .filter(mapping -> !mapping.getClass().getSimpleName().equals("IntegrationRequestMappingHandlerMapping"))

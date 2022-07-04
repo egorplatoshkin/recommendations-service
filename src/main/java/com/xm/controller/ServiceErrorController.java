@@ -1,4 +1,4 @@
-package com.xm.controller.v1;
+package com.xm.controller;
 
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @ApiIgnore
 @Controller
-public class CustomErrorController implements ErrorController {
+public class ServiceErrorController implements ErrorController {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @RequestMapping("/error")
