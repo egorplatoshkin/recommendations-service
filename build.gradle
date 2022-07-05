@@ -10,7 +10,6 @@ sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
@@ -21,6 +20,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.1'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation "io.springfox:springfox-boot-starter:3.0.0"
 }
 
 tasks.named('test') {
